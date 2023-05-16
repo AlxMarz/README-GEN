@@ -8,40 +8,40 @@ function generateMarkdown(response){
     } else {
         badge = "https://badgen.net/gitlab/license/gitlab-org/omnibus-gitlab";
     };
-    // USE THE WRITEFILE FUNCTION TO MAKE A README 
+
     fs.writeFile(`${response.fullName}'s README`, `# ${response.title}
 
-## Description
-    
-${response.description}
-    
-## Table of Contents
-    
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-    
-## Installation
-    
-${response.installation}
-    
-## Usage
-    
-${response.usage}
-    
-## Credits
-    
-GitHub: (https://github.com/${response.userName})
-[Email Me](mailto:${response.email})
+            ## Description
+                
+            ${response.description}
+                
+            ## Table of Contents
+                
+            - [Installation](#installation)
+            - [Usage](#usage)
+            - [Credits](#credits)
+            - [License](#license)
+                
+            ## Installation
+                
+            ${response.installation}
+                
+            ## Usage
+                
+            ${response.usage}
+                
+            ## Credits
+                
+            GitHub: (https://github.com/${response.userName})
+            [Email Me](mailto:${response.email})
 
-${response.credits}
-    
-## License
-    
-![License Badge](${badge})
-    
----`, err => err ? console.log("There was an error!") : console.log("README has been generated!"))
-}
+            ${response.credits}
+                
+            ## License
+                
+            ![License Badge](${badge})
+                
+            ---`, err => err ? console.log("There was an error!") : console.log("README has been generated!"))
+            }
 
-module.exports = generateMarkdown
+            module.exports = generateMarkdown
