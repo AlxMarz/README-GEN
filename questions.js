@@ -1,15 +1,29 @@
 const questions = [
+
+   {
+    type: "input",
+    name: "fullName",
+    message: "What is your full name?"
+    },
+    {
+      type: "input",
+      name: "userName",
+      message: "What is your GitHub Username?"
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "What is your email address?"
+     },
     {
         type: "input",
         message: "what is the name of your project",
-        name: "project name",
-        default: "README GEN"  
+        name: "title",
     },
     {
       type: "input",
       name: "Description",
       message: "provide a brief description of your project!",
-      default: "Add a description"
     },
     {
       type:"input",
@@ -23,13 +37,8 @@ const questions = [
     },
     {
       type:"input",
-      name:"contribution",
+      name:"credits",
       message:"Who are the contributing parties?"
-    },
-    {
-      type:"input",
-      name:"test",
-      message:"What are the test instructions your project?"
     },
     {
       type:"list",
@@ -42,13 +51,8 @@ const questions = [
             ]
 
     },
-    {
-      type:"input",
-      name:"git",
-      message:"WHat is your github id?",
-    }
 
     
 ]
 
-module.exports = questions
+module.exports = {questions}
