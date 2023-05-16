@@ -1,5 +1,6 @@
 const questions = require('./questions');
 const inquirer = require("inquirer");
+var fs = require("fs")
 
 function askQuestions(){
     inquirer.prompt(questions).then(function(answers) {
