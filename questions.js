@@ -1,3 +1,4 @@
+//LIST OF QUESTIONS USER WILL BE PROMPTED
 const questions = [
 
    {
@@ -17,7 +18,7 @@ const questions = [
      },
     {
         type: "input",
-        message: "what is the name of your project",
+        message: "What do you want to name your project",
         name: "title",
     },
     {
@@ -54,5 +55,5 @@ const questions = [
 
     
 ]
-
+//SENDS BACK TO APP.JS
 module.exports = {questions}

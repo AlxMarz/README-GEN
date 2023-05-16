@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 function generateMarkdown(response){
+    //CHEKS FOR MULTIPLE CHOICE
     if (response.license === "mit") {
         badge = "https://badgen.net/github/license/micromatch/micromatch";
     } else if (response.license === "gpl") {
@@ -9,6 +10,9 @@ function generateMarkdown(response){
         badge = "https://badgen.net/gitlab/license/gitlab-org/omnibus-gitlab";
     };
 
+    //README TEMPLATE
+    
+    //USING WRITE FILE FROM THE RESPONSE TO RENDER README
     fs.writeFile(`${response.fullName}'s README`, `# ${response.title}
 
             ## Description
@@ -44,4 +48,5 @@ function generateMarkdown(response){
             ---`, err => err ? console.log("There was an error!") : console.log("README has been generated!"))
             }
 
+            //SENDS TO APP.JS
             module.exports = generateMarkdown
