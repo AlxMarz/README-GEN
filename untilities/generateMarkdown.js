@@ -15,37 +15,36 @@ function generateMarkdown(response){
     //USING WRITE FILE FROM THE RESPONSE TO RENDER README
     fs.writeFile(`${response.fullName}'s README`, `# ${response.title}
 
-            ## Description
+## ${response.description}
                 
-            ${response.description}
+## Table of Contents
                 
-            ## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
                 
-            - [Installation](#installation)
-            - [Usage](#usage)
-            - [Credits](#credits)
-            - [License](#license)
+## ${response.installation}
                 
-            ## Installation
+            
                 
-            ${response.installation}
+## Usage
                 
-            ## Usage
+${response.usage}
                 
-            ${response.usage}
+## Credits
                 
-            ## Credits
-                
-            GitHub: (https://github.com/${response.userName})
-            [Email Me](mailto:${response.email})
+GitHub: (https://github.com/${response.userName})
+[Email Me](mailto:${response.email})
 
-            ${response.credits}
+${response.credits}
                 
-            ## License
+## License
                 
-            ![License Badge](${badge})
+![License Badge](${badge})
                 
-            ---`, err => err ? console.log("There was an error!") : console.log("README has been generated!"))
+---`, err => err ? 
+console.log("There was an error!") : console.log("README has been generated!"))
             }
 
             //SENDS TO APP.JS
